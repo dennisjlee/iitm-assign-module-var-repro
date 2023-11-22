@@ -29,5 +29,5 @@ $ npm run test:iitm
 (node:12408) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
 setting env, env.FOO is bar
-using env from another module, env.FOO is undefined
+using env from another module, env.FOO is baz
 ```
