@@ -8,11 +8,10 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "cross-env": "^7.0.3",
     "import-in-the-middle": "^1.4.2"
   },
   "scripts": {
-    "test": "cross-env FOO=bar node index.js",
-    "test:iitm": "cross-env FOO=bar node --experimental-loader import-in-the-middle/hook.mjs index.js"
+    "test": "node index.js",
+    "test:iitm": "node --experimental-loader import-in-the-middle/hook.mjs index.js"
   }
 }

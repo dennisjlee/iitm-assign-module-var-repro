@@ -13,10 +13,10 @@ I have tested this behavior with Node 20.9.0 and 18.18.2.
 ```bash
 $ npm run test
 > iitm-sveltekit-repro@0.0.1 test
-> cross-env FOO=bar node index.js
+> node index.js
 
-setting env, env.foo is bar
-using env from another module, env.foo is bar
+setting env, env.FOO is bar
+using env from another module, env.FOO is bar
 ```
 
 #### Actual behavior with import-in-the-middle
@@ -24,10 +24,10 @@ using env from another module, env.foo is bar
 $ npm run test:iitm
 
 > iitm-sveltekit-repro@0.0.1 test:iitm
-> cross-env FOO=bar node --experimental-loader import-in-the-middle/hook.mjs index.js
+> node --experimental-loader import-in-the-middle/hook.mjs index.js
 
 (node:12408) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
-setting env, env.foo is bar
-using env from another module, env.foo is undefined
+setting env, env.FOO is bar
+using env from another module, env.FOO is undefined
 ```
